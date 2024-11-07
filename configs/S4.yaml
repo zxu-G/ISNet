@@ -14,7 +14,7 @@ feature_args:
   Solar_AZI: true
   Solar_ELE: true
 model_args:
-  batch_size: 10
+  batch_size: 12
   dropout: 0.1
   encoder_dim: 96
   feature_emb_dim: 32
