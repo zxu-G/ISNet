@@ -41,7 +41,6 @@ model_args:
   output_seq_len: 12
   revin: true
   seq_length: 36
-  time_emb_dim: 10
 optim_args:
   cl_epochs: 5
   epochs: 80
