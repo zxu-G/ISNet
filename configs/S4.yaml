@@ -1,0 +1,74 @@
+data_args:
+  adj_type: doubletransition
+  data_dir: datasets/S4
+feature_args:
+  ASYH: true
+  Bt: true
+  ELE: true
+  Flow_Speed: true
+  Lat: true
+  Lon: true
+  MgII: true
+  S4: true
+  SYMH: true
+  Solar_AZI: true
+  Solar_ELE: true
+model_args:
+  batch_size: 10
+  dropout: 0.1
+  encoder_dim: 96
+  feature_emb_dim: 32
+  feature_names:
+  - ELE
+  - Lat
+  - Lon
+  - Bt
+  - MgII
+  - Solar_ELE
+  - Solar_AZI
+  - SYMH
+  - ASYH
+  - Flow_Speed
+  gap: 3
+  k_s: 3
+  k_t: 3
+  lat_num: 2
+  lon_num: 3
+  loss_weight: true
+  num_feat: 1
+  num_hidden: 32
+  num_nodes: 106
+  output_seq_len: 12
+  revin: true
+  seq_length: 36
+  time_emb_dim: 10
+optim_args:
+  cl_epochs: 5
+  epochs: 80
+  eps: 1.0e-08
+  if_cl: true
+  lr_decay_ratio: 0.6
+  lr_sche_steps:
+  - 1
+  - 15
+  - 25
+  - 38
+  - 46
+  - 54
+  - 61
+  - 72
+  lr_schedule: true
+  lrate: 0.0032
+  output_seq_len: 12
+  patience: 15
+  print_model: false
+  reconstruction_loss: true
+  seq_length: 36
+  warm_epochs: 0
+  wdecay: 1.0e-05
+start_up:
+  device: cuda:0
+  load_pkl: false
+  mode: scratch
+  model_name: ISNet
+  resume_epoch: 0
