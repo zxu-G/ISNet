@@ -1,5 +1,3 @@
-# ISNet: Decomposed Dynamic Spatio-Temporal Neural Network for Ionospheric Scintillation Forecasts
-
 
 ## 1. Requirements
 
